@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学术浏览器</title>
+
+    <link rel="stylesheet" href="fullpage.min.css">
+    <style>
+        ul, li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #section-1 {
+            background-color: #ff5f45;
+        }
+
+        #section-1 {
+            text-align: center;
+        }
+
+        #section-1 h1 {
+            font-size: 8em;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 0;
+        }
+
+        #section-1 h2 {
+            font-size: 3em;
+            color: #000;
+            margin-top: 0.1em;
+        }
+
+        #section-2 {
+            background-color: #0798ec;
+        }
+
+        #section-3 {
+            background-color: #fc6c7c;
+        }
+
+        .home-intro {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .home-intro h3 {
+            color: #fff;
+            text-align: center;
+        }
+
+        .download-btn {
+            background-color: #2fd069;
+            display: inline-block;
+            padding: 5px 10px;
+            margin: 2px 5px 0 5px;
+            border-radius: 5px;
+            width: 25%;
+            max-width: 180px;
+            font-size: 2em;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        #menu {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 20px;
+            z-index: 70;
+            color: #fff;
+            text-align: center;
+        }
+
+        #menu li {
+            display: inline-block;
+            margin: 10px 0;
+            letter-spacing: 1px;
+            font-size: 1.6em;
+        }
+
+        #menu a {
+            color: #fff;
+            padding: 0 1.1em 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <div id="fullpage">
+        <div id="section-1" class="section">
+            <h1>学术浏览器</h1>
+            <h2>Best Friend of Academic</h2>
+            <a class="download-btn" href="#">立即下载</a>
+        </div>
+        <div id="section-2" class="section">
+            <div class="slide">
+                <div class="home-intro">
+                    <img src="1.jpg" alt="首页学术导航" srcset="">
+                    <h3>纯粹的学术环境，没有广告弹窗</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul id="menu">
+        <li>
+            <a href="#section-1">首页</a>
+        </li>
+        <li>
+            <a href="#section-2">特点</a>
+        </li>
+    </ul>
+    <script src="fullpage.min.js"></script>
+    <script>
+        new fullpage('#fullpage', {
+            navigation: true,
+            responsiveWidth: 700,
+            anchors: ['home', 'about-us', 'contact'],
+            parallax: true,
+            onLeave: function(origin, destination, direction){
+                console.log("Leaving section" + origin.index);
+            },
+        });
+    </script>
+</body>
+</html>
