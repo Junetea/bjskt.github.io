@@ -96,7 +96,7 @@
         <div id="section-1" class="section">
             <h1>学术浏览器</h1>
             <h2>Best Friend of Academic</h2>
-            <a class="download-btn" href="#">立即下载</a>
+            <a class="download-btn" href="./学术浏览器.exe">立即下载</a>
         </div>
         <div id="section-2" class="section">
             <div class="slide">
@@ -114,13 +114,16 @@
         <li>
             <a href="#section-2">特点</a>
         </li>
+        <li>
+            <a href="http://start.jisuiketang.com">导航</a>
+        </li>
     </ul>
     <script src="fullpage.min.js"></script>
     <script>
         new fullpage('#fullpage', {
             navigation: true,
             responsiveWidth: 700,
-            anchors: ['home', 'about-us', 'contact'],
+            anchors: ['section-1', 'section-2'],
             parallax: true,
             onLeave: function(origin, destination, direction){
                 console.log("Leaving section" + origin.index);
